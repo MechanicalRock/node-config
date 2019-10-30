@@ -4,6 +4,8 @@
   "description": "Mechanical Rock Node Package Config",
   "main": "index.js",
   "scripts": {
+    "build": "",
+    "clean": "",
     "test": "echo 'no tests'",
     "release:beforeVersion": "npm run clean && npm run build",
     "release:afterVersion": "npm run test && npm login && npm publish --access public && git push && git push --tags",
