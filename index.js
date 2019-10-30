@@ -1,11 +1,16 @@
+const tslint = require('./tslint.json')
+const tsconfig = require('./tsconfig.json')
+const jestCi = require('./jest.config.ci')
+const jestIntegration = require('./jest.config.integration')
+const jestDefault=require('./jest.config')
 module.exports = {
-  tslint: require('./tslint.json'),
-  tsconfig: require('./tsconfig.json'),
+  tslint,
+  tsconfig,
   jest: {
     config: {
-      ci: require('./jest.config.ci'),
-      integration: require('./jest.config.integration'),
-      default: require('./jest.config')
+      ci: jestCi,
+      integration: jestIntegration,
+      default: jestDefault
     }
   }
 }
